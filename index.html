@@ -1,0 +1,56 @@
+
+<!--  Switch language message-->
+
+
+<script type="text/javascript">
+
+var texto = "";
+var urlWidget = window.location.href;
+
+if(urlWidget.search( 'es_ES' )!=-1){
+
+   texto = '<center><div style="max-width:580px; margin-left:10px; margin-right:10px; font-size: 14px;  font-family: futura, arial, sans-serif;"><p style="font-size: 16px;"><b>Política cancelación</b></p></center><p>Al solicitar la reserva mediante el formulario online, no se hará efectiva hasta que la revisemos y confirmemos disponibilidad para la fecha solicitada. Será sólo entonces cuando les enviemos un mail de confirmación.</p><p>La anulación de la reserva sólo será válida si se hace por escrito con más de 48 horas de antelación.</p><p>En caso de no cumplir con las condiciones de la política de cancelación, se cargará a la tarjeta de crédito suministrada 100€ por persona, no reembolsables, en reservas de hasta 5 personas y 200€ en mesas de más de 5 personas.</p></div>';
+
+}else if(urlWidget.search( 'it_IT' )!=-1){
+
+   texto = '<center> <div style="max-width:580px; margin-left:10px; margin-right:10px; font-size: 14px;  font-family: futura, arial, sans-serif;"> <p style="font-size: 16px;"><b>Politica di cancellazione</b></p></center><p>Quando si effettua una prenotazione tramite il modulo online, questa non sarà effettiva finché non verrá esaminata e confermata la disponibilità per la data richiesta. Lo sarà solo quando invieremo un email di conferma.</p> <p>La cancellazione della prenotazione sarà valida solo se effettuata per iscritto con più di 48 ore di anticipo.</p><p>In caso di mancato rispetto delle condizioni della politica di cancellazione, verranno addebitati 100 euro a persona sulla carta di credito fornita, non rimborsabili, su prenotazioni fino a 5 persone e € 200 su prenotazioni superiori alle 5 persone.</p></div>';
+
+}else if(urlWidget.search( 'fr_FR' )!=-1){
+
+  texto = '<center> <div style="max-width:580px; margin-left:10px; margin-right:10px; font-size: 14px;  font-family: futura, arial, sans-serif;"> <p style="font-size: 16px;"><b>Politique d’annulation</b></p></center> <p>Une fois vous aurez fait la demande de réservation en ligne, nous réviserons les dates demandées et vous enverrons un email de confirmation en cas de disponibilité.</p> <p>Vous pourrez annuler la réservation jusqu’à 48h avant. Cependant, vous devrez nous faire parvenir cette demande par écrit.</p> <p>Si vous ne respectez pas les conditions d’annulation, nous serons en mesure de charger sur votre carte bleue la somme de 100€ par personne, non remboursables, pour les réservations de jusqu’à 5 personnes et 200€ pour celles de plus de 5 couverts.</p> </div> ';
+
+
+}else{
+  texto = '<center> <div style="max-width:580px; margin-left:10px; margin-right:10px; font-size: 14px;  font-family: futura, arial, sans-serif;"> <p style="font-size: 16px;"><b>Cancellation policy</b></p></center><p>Once you have requested an online reservation, we will confirm your booking through email only if the requested dates are available.</p> <p>You will be able to cancel your reservation up to 48 hours in advance. This action must be done in writing.</p> <p>If this cancellation policy is not respected, we will charge your on credit card a non-refundable amount of 100€ per person on reservations up to 5 people and 200€ for bookings of 6 people or more.</p> </div> ';
+}
+
+</script>
+
+<div id="message" align="justify" style="width: 90%;  margin-left: 15px; font-size:16px;color:#525252; font-family:Arial; font-weight:bold;">
+<script type="text/javascript">document.write(texto);</script>
+</div>
+
+<script type="text/javascript">
+
+window.onload= Resize;
+window.onresize=Resize;
+
+function Resize(){
+  if(window.innerWidth > 590){
+     var test= document.getElementById("message");
+     test.style.width= 540+"px";
+     console.log(test.style.width);
+     var marlft = (window.innerWidth-540)/2;
+     console.log("Margin-left before"+ test.style.marginLeft);
+     console.log("Margin-left after"+marlft);
+     test.style.marginLeft =  marlft+"px";
+     console.log(test.style.marginLeft);
+     
+  }else{
+    var test= document.getElementById("message");
+    test.style.width= 90+"%";
+    test.style.marginLeft = 15+"px";
+  };
+}
+
+</script>
