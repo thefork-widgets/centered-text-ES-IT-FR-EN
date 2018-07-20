@@ -1,2 +1,3 @@
-# MensajeCentrado_ES-IT-FR-EN
-Mensaje centrado en función del idioma del widget
+# CenteredText_ES-IT-FR-EN
+
+Centered text depending on the widget languaje
