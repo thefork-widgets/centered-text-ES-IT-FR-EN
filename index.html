@@ -26,31 +26,8 @@ if(urlWidget.search( 'es_ES' )!=-1){
 
 </script>
 
-<div id="message" align="justify" style="width: 90%;  margin-left: 15px; font-size:16px;color:#525252; font-family:Arial; font-weight:bold;">
+<div style="text-align: justify; min-width: 320px; max-width: 520px; padding-bottom: 10px; margin: 0 auto; font-weight: bold;">
 <script type="text/javascript">document.write(texto);</script>
 </div>
 
-<script type="text/javascript">
 
-window.onload= Resize;
-window.onresize=Resize;
-
-function Resize(){
-  if(window.innerWidth > 590){
-     var test= document.getElementById("message");
-     test.style.width= 540+"px";
-     console.log(test.style.width);
-     var marlft = (window.innerWidth-540)/2;
-     console.log("Margin-left before"+ test.style.marginLeft);
-     console.log("Margin-left after"+marlft);
-     test.style.marginLeft =  marlft+"px";
-     console.log(test.style.marginLeft);
-     
-  }else{
-    var test= document.getElementById("message");
-    test.style.width= 90+"%";
-    test.style.marginLeft = 15+"px";
-  };
-}
-
-</script>
