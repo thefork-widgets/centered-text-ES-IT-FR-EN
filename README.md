@@ -1,4 +1,4 @@
-# CenteredText_ES-IT-FR-EN
+# centered-text-ES-IT-FR-EN
 
 Centered text depending on the widget language
 
